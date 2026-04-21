@@ -1,0 +1,4 @@
+# Miscellaneous
+product.abc=ok
+ro.product.ab_ota_partitions=boot,system,vendor
+
