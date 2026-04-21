@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # API levels
-PRODUCT_SHIPPING_API_LEVEL := 33
+PRODUCT_SHIPPING_API_LEVEL := 32
 
 # fastbootd
 PRODUCT_PACKAGES += \
