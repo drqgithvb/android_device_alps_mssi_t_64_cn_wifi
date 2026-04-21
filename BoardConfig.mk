@@ -45,6 +45,11 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 180
+# Set one of the following based on your target screen resolution:
+TW_THEME := portrait_hdpi
+# Or alternatively:
+# TARGET_SCREEN_WIDTH := 1080
+# TARGET_SCREEN_HEIGHT := 1920
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
