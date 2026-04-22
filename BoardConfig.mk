@@ -114,3 +114,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 # enable log
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# include resetprop
+TW_INCLUDE_RESETPROP := true
