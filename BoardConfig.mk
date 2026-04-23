@@ -117,3 +117,10 @@ TARGET_USES_LOGD := true
 
 # include resetprop
 TW_INCLUDE_RESETPROP := true
+
+#add fix for mediatek according to gemini(not reliable?)
+# 强制指定 vendor 输出为真实目录
+TARGET_COPY_OUT_VENDOR := vendor
+
+# 声明 vendor 分区的文件系统格式（如果有的话，通常为 ext4 或 erofs）
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
