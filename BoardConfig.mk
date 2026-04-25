@@ -134,3 +134,6 @@ TW_USE_FSCRYPT_POLICY := 2
 
 # 如果遇到编译 keymaster 相关报错，可以取消下面这行的注释
 PLATFORM_SECURITY_PATCH := 2099-12-31
+
+#try use lzma to reduce size
+LZMA_RAMDISK_TARGETS := boot
