@@ -125,16 +125,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # 声明 vendor 分区的文件系统格式（如果有的话，通常为 ext4 或 erofs）
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
-# --- FBE 数据解密核心开关 ---
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-BOARD_USES_METADATA_PARTITION := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_USE_FSCRYPT_POLICY := 2
-
-# 如果遇到编译 keymaster 相关报错，可以取消下面这行的注释
-PLATFORM_SECURITY_PATCH := 2099-12-31
-
 #try use lzma to reduce size
 LZMA_RAMDISK_TARGETS := boot
 
