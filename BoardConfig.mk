@@ -137,3 +137,17 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 
 #try use lzma to reduce size
 LZMA_RAMDISK_TARGETS := boot
+
+# --- TWRP 极限瘦身套餐 ---
+# 剔除多国语言，只保留英文（测试能开机解密后，再考虑加回中文）
+TW_EXTRA_LANGUAGES := false
+# 禁用鼠标支持（平板触摸能用即可，不需要鼠标）
+TW_NO_MOUSE := true
+# 禁用 NTFS 和 exFAT 格式的 U盘支持（能省出大量驱动空间）
+TW_INCLUDE_NTFS_3G := false
+TW_NO_EXFAT_FUSE := true
+TW_NO_EXFAT := true
+# 禁用内置的 Python 和 Nano 编辑器
+TW_EXCLUDE_PYTHON := true
+# 使用体积更小的 toybox 替代臃肿工具
+TW_USE_TOOLBOX := true
