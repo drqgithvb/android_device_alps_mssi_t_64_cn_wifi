@@ -125,6 +125,32 @@ TARGET_COPY_OUT_VENDOR := vendor
 # 声明 vendor 分区的文件系统格式（如果有的话，通常为 ext4 或 erofs）
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
+# --- FBE 数据解密核心开关 ---
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+BOARD_USES_METADATA_PARTITION := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_USE_FSCRYPT_POLICY := 2
+
+# 如果遇到编译 keymaster 相关报错，可以取消下面这行的注释
+PLATFORM_SECURITY_PATCH := 2099-12-31
+
+#try use lzma to reduce size
+LZMA_RAMDISK_TARGETS := boot
+
+# --- TWRP 极限瘦身套餐 ---
+# 剔除多国语言，只保留英文（测试能开机解密后，再考虑加回中文）
+TW_EXTRA_LANGUAGES := false
+# 禁用鼠标支持（平板触摸能用即可，不需要鼠标）
+TW_NO_MOUSE := true
+# 禁用 NTFS 和 exFAT 格式的 U盘支持（能省出大量驱动空间）
+TW_INCLUDE_NTFS_3G := false
+TW_NO_EXFAT_FUSE := true
+TW_NO_EXFAT := true
+# 禁用内置的 Python 和 Nano 编辑器
+TW_EXCLUDE_PYTHON := true
+# 使用体积更小的 toybox 替代臃肿工具
+TW_USE_TOOLBOX := true
 
 # 如果遇到编译 keymaster 相关报错，可以取消下面这行的注释
 PLATFORM_SECURITY_PATCH := 2099-12-31
